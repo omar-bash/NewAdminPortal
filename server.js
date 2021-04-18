@@ -43,6 +43,33 @@ app.get('/login', (req,res) =>{
 
 
 
+var Schema = new mongoose.Schema({
+    address: String
+})
+var userA=mongoose.model('emp', Schema)
+const UserData = mongoose.model('UserData', Schema);
+// app.get('/fuel', (req,res)=> {
+//     UserData.find({}, function(err, users) {
+//         res.render('fuel', {
+//             UserAddress: users
+//         });
+//     })
+// })
+app.post('/new',function(req,res){
+	new userA({
+		address: req.body.address
+	}).save(function(err,doc){
+		if(err) res.json(err);
+		else res.redirect('/fuel')
+	})
+})
+
+// app.get('/view',function(req,res){
+// 	userA.find({},function(err,docs){
+// 		if(err) res.json(err);
+// 			else res.render();
+// 	})
+// })
 
 app.post('/api/login', async (req, res) => {
 	const { username, password } = req.body

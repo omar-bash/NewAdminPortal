@@ -10,7 +10,7 @@
 <div class="form-box">
 
 
-	<form>
+	<form action="/new" method="POST">
   
   <label for="fullName">Full Name:</label>
   
@@ -18,12 +18,12 @@
 
   
         
-    <label for="inputAddress">Address</label>
+    <label for="inputAddress" name="address">Address</label>
     <input type="text" class="input" id="inputAddress" minlength="100" placeholder="1234 Main St"><br>
 
   
     <label for="inputAddress2">Address 2</label>
-    <input type="text" class="input" id="inputAddress2" minlength="100" placeholder="Apartment, studio, or floor"><br>
+    <input type="text" class="input" id="inputAddress2"  placeholder="Apartment, studio, or floor"><br>
 
     
       <label for="inputCity">City</label>
@@ -44,7 +44,7 @@
       <input type="text" class="input" id="inputZip" minlength="5">
     
 
- <a href="fuel"> <button type="submit" class="submit"><a href="fuel">Sign in</a></button>
+<!--  <a href="fuel"> --> <button type="submit" class="submit"><a href="fuel">Sign in</a></button>
 </form>
 </div>
 
